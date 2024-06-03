@@ -1,18 +1,7 @@
-# Classes
+# Array Methods Advanced
 
-Define a static method called fromObject inside the Person class which takes in an object literal as parameter and instantiate a Person object.
+Create a function called `ageAverage` that takes in an array of people and returns the average age.
 
-class Person {
-constructor(firstName, lastName) {
-this.firstName = firstName;
-this.lastName = lastName;
-}
-}
+**Suggestion**
 
-const obj = {
-firstName: 'Mario',
-lastName: 'Rossi'
-};
-
-const person = Person.fromObject(obj);
-console.log(person.firstName + " " + person.lastName);
+Look at the [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) and [Math.round](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) methods to solve the exercise.

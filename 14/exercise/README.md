@@ -1,14 +1,7 @@
-# Classes
+# Array Methods Advanced
 
-Define a class called `Person` that takes in three parameters in the constructor (`firstName`, `lastName` and `age`). Create the getters and setters methods for each property and a getter method called `fullName` that returns the full name.
+Create a function called `uncompletedNotes` that returns only not completed todos.
 
-class Person {
-// ...
-}
+**Suggestion**
 
-const person = new Person('Mario', 'Rossi', 25);
-console.log(person.fullName);
-
-person.firstName = 'Maria';
-person.lastName = 'Verdi';
-console.log(person.fullName);
+Use the forEach and filter arrays methods.

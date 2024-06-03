@@ -1,13 +1,9 @@
-# Classes
+# Array Methods Advanced
 
-Create a class called Developer. The Developer class has to inherit the Person class created in the previous exercise. The Developer class takes in another argument in the constructor method (role).
+Create a function called `nicknameMap` that takes in an array of people and returns an array of nicknames. The nickname should be composed in this way: `<name>-<age>`.
 
-class Person {
-constructor(firstName, lastName) {
-this.firstName = firstName;
-this.lastName = lastName;
-}
-}
+Example:
 
-const developer = new Developer("Mario", "Rossi", "Front-end");
-console.log(developer.firstName + " " + developer.lastName + " " + developer.role);
+```
+{ name: 'Paul', age: 21 } => Paul-21
+```

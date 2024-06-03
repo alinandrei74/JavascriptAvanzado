@@ -1,19 +1,22 @@
-class Person {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-
-  static fromObject(obj) {
-    return new Person(obj.firstName, obj.lastName)
-  }
-
+function calculateAverageAge(persons) {
+  const totalAge = persons.reduce((sum, person) => sum + person.age, 0);
+  const averageAge = totalAge / persons.length;
+  return averageAge
 }
 
-const obj = {
-  firstName: "Mario",
-  lastName: "Rossi",
-};
+const persons = [
+  { name: 'Paul', age: 16 },
+  { name: 'George', age: 17 },
+  { name: 'Lucas', age: 21 },
+  { name: 'Marco', age: 32 },
+  { name: 'Peter', age: 18 },
+  { name: 'Carl', age: 13 },
+  { name: 'Simon', age: 24 },
+  { name: 'Mark', age: 15 },
+  { name: 'Sandra', age: 34 },
+  { name: 'Alice', age: 28 }
+];
 
-const person = Person.fromObject(obj);
-console.log(person.firstName + " " + person.lastName);
+const average = calculateAverageAge(persons);
+console.log(persons);
+console.log(average);

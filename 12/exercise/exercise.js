@@ -1,19 +1,20 @@
-class Person {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
+function nicknameMap(persons) {
+  return persons.map(person => `${person.name}-${person.age}`)
 }
 
-class Developer extends Person {
-  constructor(firstName, lastName, role) {
-    super(firstName, lastName);
-    this.role = role;
-  }
-}
+const persons = [
+  { name: 'Paul', age: 16 },
+  { name: 'George', age: 17 },
+  { name: 'Lucas', age: 21 },
+  { name: 'Marco', age: 32 },
+  { name: 'Peter', age: 18 },
+  { name: 'Carl', age: 13 },
+  { name: 'Simon', age: 24 },
+  { name: 'Mark', age: 15 },
+  { name: 'Sandra', age: 34 },
+  { name: 'Alice', age: 28 }
+];
 
-
-const developer = new Developer("Mario", "Rossi", "Front-end");
-console.log(
-  developer.firstName + " " + developer.lastName + " " + developer.role
-);
+const nicknames = nicknameMap(persons);
+console.log(persons);
+console.log(nicknames);

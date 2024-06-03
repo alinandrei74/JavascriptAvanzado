@@ -1,8 +1,9 @@
-function sortPeopleByAge(arr) {
-  return arr.sort((a, b) => a.age - b.age);
+function adultFilter(persons) {
+  return persons.filter(person => person.age >= 18);
 }
 
-const people = [
+
+const persons = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
   { name: 'Lucas', age: 21 },
@@ -15,5 +16,6 @@ const people = [
   { name: 'Alice', age: 28 }
 ];
 
-const sortingByAge = sortPeopleByAge(people)
-console.log(sortingByAge)
+const adults = adultFilter(persons);
+console.log(persons);
+console.log(adults);
