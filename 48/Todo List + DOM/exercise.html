@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+    <ul class="todo-list"></ul>
+  </body>
+</html>
+
+<script>
+  // code here
+  const apiURL = 'https://jsonplaceholder.typicode.com/todos';
+
+  async function fetchTodos() {
+    try{
+      const response = await fetch(apiURL);
+      const todos = await response.json();
+
+      const todoListElement = document.querySelector(".todo-list");
+
+      todos.forEach(todo => {
+        const li = document.createElement("li");
+        li.textContent = todo.title;
+        todoListElement.appendChild(li);
+      });
+    }catch (error) {
+      console.error("Error con el fetch", error);
+    }
+  }
+  fetchTodos();
+  
+</script>

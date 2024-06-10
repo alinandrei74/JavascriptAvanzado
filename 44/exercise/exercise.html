@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+  </body>
+</html>
+
+<script>
+  // code here
+ async function obtenerTodo() {
+  try {
+    const respuesta = await fetch("https://jsonplaceholder.typicode.com/todos/4");
+    const todo = await respuesta.json()
+
+    //elemento h2
+
+    const tituloElemento = document.createElement("h2");
+    tituloElemento.textContent = todo.title;
+
+    //Crea elemento input
+
+    const checkboxElemento = document.createElement("input");
+    checkboxElemento.type = "checkbox";
+    checkboxElemento.checked = todo.completed;
+
+    // obtener contenedor y agregar los elementos cargados
+
+    const contenedor = document.getElementById("container");
+    contenedor.appendChild(tituloElemento);
+    contenedor.appendChild(checkboxElemento);
+  } catch (error) {
+    console.error("No se pudo obtener el todo", error);
+  }
+ }
+ obtenerTodo();
+  
+</script>
